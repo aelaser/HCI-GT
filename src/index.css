@@ -1,0 +1,202 @@
+html {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  color: #00233F;
+  background-color: #EDF0F5;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* 1rem = 16px (if the base size is 16px) */
+
+}
+
+h1 {
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.8rem;
+  font-size: 1.8rem; /* 2rem = 32px */
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1rem; /* 1rem = 16px */
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* .App .desktop-filter-sidebar {
+  
+  margin: 0;
+} */
+
+.search-bar .MuiOutlinedInput-root {
+  border-radius: 20px; /* Rounded corners */
+  background-color: white; /* White background */
+
+  /* You might want to adjust padding, border, etc., as per your design needs */
+}
+
+.filter-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.5rem;
+}
+
+.rounded-card {
+  border-radius: 20px !important; /* Increased specificity */
+}
+
+
+/* Arrow */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin: 1em auto;
+}
+
+/* Arrow Icon */
+.arrow-icon {
+  /* Adjust the size of the arrow icon relative to its container */
+  transform: scale(0.6); /* Scale down the arrow */
+}
+
+.left-bar, .right-bar {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  width: 20px; /* Smaller width */
+  height: 5px; /* Smaller height */
+  display: block;
+  float: right;
+  border-radius: 2px;
+}
+
+.left-bar {
+  left: 0;
+  transform: rotate(35deg);
+}
+
+.left-bar:after, .right-bar:after {
+  content: "";
+  background-color: #00233F;
+  width: 20px; /* Smaller width */
+  height: 5px; /* Smaller height */
+  display: block;
+  float: right;
+  border-radius: 3px 5px 5px 3px; /* Adjusted border radius */
+  transition: all 0.5s cubic-bezier(.25, 1.7, .35, .8);
+  z-index: -1;
+}
+
+.right-bar {
+  left: 13px; /* Adjusted position */
+  transform: rotate(-35deg);
+}
+
+.right-bar:after {
+  border-radius: 5px 3px 3px 5px; /* Adjusted border radius */
+}
+
+.arrow-icon.open .left-bar:after {
+  transform-origin: center center;
+  transform: rotate(-70deg);
+}
+
+.arrow-icon.open .right-bar:after {
+  transform-origin: center center;
+  transform: rotate(70deg);
+}
+
+
+/* Filter  */
+/* Checkbox customization */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Spacing between each filter option */
+}
+
+.checkbox-container label {
+  margin-left: 8px;
+}
+
+.checkbox-container input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* background-color: #f0f0f0; */
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px; /* Slightly rounded corners */
+  border: 1px solid #BCC3C9;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-container input[type='checkbox']:checked {
+  background-color: #4088C2;
+  border-color: rgba(64, 136, 194, 0.5);
+}
+
+.checkbox-container input[type='checkbox']:checked:after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 3px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+
+
+/* App.css */
+@media (max-width: 899px) {
+  .App .desktop-filter-sidebar {
+    display: none;
+  }
+  /* Styles for scrollable filter tags */
+.App .responsive-filter-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  
+}
+
+}
+
+@media (min-width: 900px) {
+  .App .responsive-filter-container {
+   
+    display: none;
+  }
+}
+
